@@ -1,0 +1,12 @@
+pyrofork
+tgcrypto
+google-generativeai
+aiohttp
+requests
+pillow
+nltk
+youtube-search
+yt-dlp
+telegraph
+wget
+motor
