@@ -17,6 +17,8 @@ backup_dictionary = []
 y_words = ['youthfully', 'youthfullity', 'yearningly', 'yearnfully', 'yieldingly', 'yellowbelly', 'youngberry', 'yellowberry']
 org_len = 0
 
+
+
 # Starting the bot
 client.start()
 
@@ -51,7 +53,7 @@ with client:
 
 # Getting our word to our bot's dictionary
 def get_random_word(prefix: str, suffix: str, required_letter: str):
-    words = [word for word in dictionary if word.startswith(prefix)lower() and word.lower() endswith(suffix)lower() and word.__contains__(required_letter)lower()]
+    words = [word for word in dictionary if word.casefold().startswith(prefix.casefold()) and word.casefold().endswith(suffix.casefold()) and required_letter.casefold() in word.casefold()]
     if words:
         return random.choice(words)
     elif not words:
